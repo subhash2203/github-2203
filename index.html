@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADS Networking Services - Enterprise Networking as a Service</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;color:#1a1a1a;background:#ffffff;line-height:1.6;}
+h1,h2,h3,h4,h5,h6{font-family:'IBM Plex Sans',sans-serif;font-weight:700;}
+.container{width:100%;margin:auto;padding:0 1rem;max-width:1280px;}
+
+   body {
+            font-family: 'Inter', system-ui, sans-serif;
+            color: #1a1a1a;
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
+            font-weight: 700;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 1rem;
+            max-width: 1280px;
+        }
+
+        @media (min-width: 640px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 2rem;
+            }
+        }
+
+
+/* NAVIGATION */
+nav{position:sticky;top:0;z-index:50;background:#1e3a8a;padding:10px 0;border-bottom:1px solid #e5e7eb;}
+nav .container{display:flex;align-items:center;justify-content:space-between;}
+.logo{display:flex;align-items:center;gap:15px;}
+.logo img{height:90px;}
+.logo-title{font-size:22px;font-weight:600;color:white;}
+.tagline{font-size:14px;color:#38bdf8;}
+.nav-links{display:flex;gap:2rem;}
+.nav-links a{color:white;text-decoration:none;font-weight:500;}
+.nav-links a:hover{color:#3b82f6;}
+
+/* HERO */
+.hero{
+position:relative;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+background-image: url('https://private-us-east-1.manuscdn.com/sessionFile/4NR3zyVpdQ4XijkE2gJv7T/sandbox/4RvjnkYqbksvs0e4TvAJjb-img-3_1771826002000_na1fn_YWJvdXQtYmc.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvNE5SM3p5VnBkUTRYaWprRTJnSnY3VC9zYW5kYm94LzRSdmpua1lxYmtzdnMwZTRUdkFKamItaW1nLTNfMTc3MTgyNjAwMjAwMF9uYTFmbl9ZV0p2ZFhRdFltYy5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=DPZHUokzW5W3~x~spQfJ93Geuz2UPPi4wyn1-z5-cB7Qnb4CEnDilYh0lWjqIBsFUgiFCb0UPIIBDSEFpUeAcjsaT3hlyTrGkmOTL3~3iPudpbJz0dGMstHlfjzBe65yJtIUy1bnlz6GpbnQ-B1dmgGI2kpP9zhW8F3DyexGvZVzFhYuBSThOu6J3t8R9Gh3K2lTJppYN3aYO81cJKJJ63JSlnt2VtjZEVSo~HKX27FJhIduRjH1WOsq1hTbqGfkoNLf~llfxuh2eH7UX22vNpOIyAZzzQCcXi4Kkvs5auMHUaz~rOQ7p46FkpkmQAcB881DZK9P-x2o7ywXeElETg__');
+background-size:cover;
+background-position:center;
+}
+.hero::before{
+content:'';
+position:absolute;
+inset:0;
+background:linear-gradient(to right,rgba(255,255,255,0.9),rgba(255,255,255,0.8),rgba(255,255,255,0.7));
+}
+.hero-content{position:relative;z-index:10;text-align:center;max-width:48rem;}
+.hero h1{font-size:3rem;margin-bottom:1.5rem;}
+.hero p{font-size:1.2rem;margin-bottom:2rem;}
+.btn{padding:0.75rem 2rem;font-size:1rem;border:none;border-radius:8px;cursor:pointer;font-weight:600;}
+.btn-primary{background:#3b82f6;color:white;}
+.btn-primary:hover{background:#2563eb;}
+
+/* HOME SECTION */
+.home-content{padding:6rem 0;background:linear-gradient(135deg,#e0f2fe,#ffffff);}
+.home-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;justify-content:flex-start;align-items:center;}
+@media(max-width:768px){.home-grid{grid-template-columns:1fr;}}
+.home-image img{flex:1;width:100%;border-radius:15px;box-shadow:0 20px 40px rgba(0,0,0,0.15);}
+.home-image {flex: 1;display: flex;flex-direction: column;justify-content: flex-start; padding: 40px;}
+
+
+/* TABS */
+.tabbed-section{padding:5rem 0;background:#f9fafb;}
+.tab-navigation{display:flex;justify-content:center;gap:1rem;margin-bottom:4rem;border-bottom:1px solid #e5e7eb;}
+.tab-button{padding:0.75rem 1.5rem;font-weight:600;background:none;border:none;cursor:pointer;}
+.tab-button.active{color:#3b82f6;border-bottom:2px solid #3b82f6;}
+.tab-content{display:none;}
+.tab-content.active{display:block;}
+
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;}
+.service-card{padding:1.5rem;border:1px solid #e5e7eb;border-radius:0.5rem;background:white;}
+.service-card:hover{box-shadow:0 10px 25px rgba(0,0,0,0.1);}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr;}}
+input,textarea{width:100%;padding:10px;border:1px solid #d1d5db;border-radius:6px;margin-bottom:15px;}
+footer{background:#f3f4f6;padding:3rem 0;text-align:center;margin-top:40px;}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="container">
+<div class="logo">
+<img src="C:\Users\SUBBU\Desktop\ASSIMAGE\ADS LG.png" alt="Logo">
+<div>
+<div class="logo-title">ADS Networking Services</div>
+<div class="tagline">Advanced Secure Services</div>
+</div>
+</div>
+<div class="nav-links">
+<a href="#" onclick="switchTab('about')">About</a>
+<a href="#" onclick="switchTab('services')">Services</a>
+<a href="#" onclick="switchTab('contact')">Contact</a>
+</div>
+</div>
+</nav>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Enterprise Networking as a Service</h1>
+
+<p>Simplified network management for modern businesses. Reliable,scalable,and secure connectivity delivered on demand.</p>
+</div>
+</section>
+<section class="home-content">
+<div class="container home-grid">
+<div>
+      <h2>Powering Your Business with Secure Networking</h2>
+                <p>
+                    ADS Networking Services delivers reliable, scalable, and secure 
+                    networking solutions for modern enterprises. We specialize in routing, switching,firewall security, VPN setup,
+                    and AMC support.
+                </p>            
+</div>
+<div class="home-image">
+<img src="C:\Users\SUBBU\Desktop\ASSIMAGE\sw1.jpg" alt="home-image">
+</div>
+</div>
+</section>
+
+</section>
+    <!-- Tabbed Section -->
+    <section class="tabbed-section">
+        <div class="container">
+            <!-- Tab Navigation -->
+            <div class="tab-navigation">
+                <button class="tab-button active" onclick="switchTab('about')">About</button>
+                <button class="tab-button" onclick="switchTab('services')">Services</button>
+                <button class="tab-button" onclick="switchTab('contact')">Contact</button>
+            </div>
+
+            <!-- About Tab -->
+            <div id="about" class="tab-content active">
+                <div class="about-grid">
+                    <div class="about-content">
+                        <h2>About ADS Networking Services</h2>
+                        <p>Founded with a mission to revolutionize enterprise networking, Ass Networking Services delivers cutting-edge Network as a Service solutions tailored for businesses of all sizes. We specialize in Annual Maintenance Contracts that ensure your network infrastructure runs seamlessly.</p>
+                        <p>Our team of experienced network engineers combines technical expertise with a customer-first approach. We believe in making complex networking simple, reliable, and cost-effective.</p>
+
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">⚡</span>
+                                <span class="feature-text">24/7 Network Monitoring & Support</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🛡️</span>
+                                <span class="feature-text">Enterprise-Grade Security</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">👥</span>
+                                <span class="feature-text">Dedicated Technical Team</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-image"></div>
+                </div>
+            </div>
+
+            <!-- Services Tab -->
+            <div id="services" class="tab-content">
+                <h2 style="margin-bottom: 3rem;">Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🌐</div>
+                        <h3>Network Design & Setup</h3>
+                        <p>Custom network architecture tailored to your business requirements with scalability in mind.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">⏰</div>
+                        <h3>24/7 Monitoring</h3>
+                        <p>Continuous network monitoring with proactive issue detection and rapid response times.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🔒</div>
+                        <h3>Security Management</h3>
+                        <p>Comprehensive security protocols including firewalls, VPNs, and threat detection systems.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">⚡</div>
+                        <h3>Performance Optimization</h3>
+                        <p>Regular optimization and tuning to ensure maximum network performance and reliability.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">👨‍💼</div>
+                        <h3>Technical Support</h3>
+                        <p>Expert technical team available for consultation, troubleshooting, and system upgrades.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">📋</div>
+                        <h3>Maintenance Contracts</h3>
+                        <p>Flexible Annual Maintenance Contracts with guaranteed uptime and priority support.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Tab -->
+            <div id="contact" class="tab-content">
+                <h2 style="margin-bottom: 3rem;">Get in Touch</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <div>
+                                <p style="font-weight: 600;">Email</p>
+                                <a href="mailto:assservice2203@gmail.com">assservice2203@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <div>
+                                <p style="font-weight: 600;">Phone</p>
+                                <a href="tel:+91 9666819812">+1 91 9666819812</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                <p style="font-weight: 600;">Address</p>
+                                <p>PlotNo:80 Rukmini Enclave Sundaram Colony Bollaram <br>Secunderabad Hyderabad 500010<br>Telangana</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form" 
+      action="https://formsubmit.co/assservice2203@gmail.com" 
+      method="POST">
+                    <input type="hidden" name="_subject" value="New Enquiry from Website">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Tell us about your networking needs..." required></textarea>
+                        </div>
+ 
+      
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Ass Networking Services. All rights reserved.</p>
+            <p class="footer-subtitle">Enterprise Networking as a Service | Reliable • Secure • Scalable</p>
+        </div>
+    </footer>
+
+<script>
+function switchTab(tabName) {
+
+    // Hide all tabs
+    const tabs = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => tab.classList.remove('active'));
+
+    // Show selected tab
+    document.getElementById(tabName).classList.add('active');
+
+    // Scroll to section
+    document.querySelector('.tabbed-section').scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+</script>
+</body>
+</html>
