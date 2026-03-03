@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About - ADS Networking Services</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Inter&display=swap" rel="stylesheet">
+
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;color:#1a1a1a;background:#ffffff;line-height:1.6;}
+h1,h2,h3,h4,h5,h6{font-family:'IBM Plex Sans',sans-serif;font-weight:700;}
+.container{width:100%;margin:auto;padding:0 1rem;max-width:1280px;}
+
+   body {
+
+
+            font-family: 'Inter', system-ui, sans-serif;
+            color: #1a1a1a;
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+{
+margin: 0;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: background-image 0.5s ease-in-out;
+        }
+
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
+            font-weight: 700;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 1rem;
+            max-width: 1280px;
+        }
+
+        @media (min-width: 640px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 2rem;
+
+         
+   }
+}
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+            user-select: none;
+            padding: 10px;
+        }
+
+        .left {
+            left: 20px;
+        }
+
+        .right {
+            right: 20px;
+        }        
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+.about-image img {
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+align-items: center;
+}
+body.custom-cursor {
+  cursor: none;
+}
+
+.custom-cursor__cursor,
+.custom-cursor__cursor-two {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.08s linear;
+  z-index: 9999;
+}
+
+.custom-cursor__cursor {
+  width: 8px;
+  height: 8px;
+  background: #00f0ff;
+}
+
+.custom-cursor__cursor-two {
+  width: 35px;
+  height: 35px;
+  border: 2px solid #00f0ff;
+  transition: transform 0.15s ease-out;
+}
+
+.custom-cursor__cursor.hover,
+.custom-cursor__cursor-two.hover {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+/* NAVIGATION */
+nav{position:sticky;top:0;z-index:50;background:#1e3a8a;padding:10px 0;border-bottom:1px solid #e5e7eb;}
+nav .container{display:flex;align-items:center;justify-content:space-between;}
+.logo{display:flex;align-items:center;gap:15px;}
+.logo img{height:90px;}
+.logo-title{font-size:22px;font-weight:600;color:white;}
+.tagline{font-size:14px;color:#38bdf8;}
+.nav-links{display:flex;gap:2rem;}
+.nav-links a{color:white;text-decoration:none;font-weight:500;}
+.nav-links a:hover{color:#3b82f6;}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00b4d8;
+}
+
+
+/* HERO */
+.hero{
+position:relative;
+min-height:75vh;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+animation: bgMove 10s linear infinite alternate;
+background-image:url('https://private-us-east-1.manuscdn.com/sessionFile/4NR3zyVpdQ4XijkE2gJv7T/sandbox/4RvjnkYqbksvs0e4TvAJjb-img-3_1771826002000_na1fn_YWJvdXQtYmc.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvNE5SM3p5VnBkUTRYaWprRTJnSnY3VC9zYW5kYm94LzRSdmpua1lxYmtzdnMwZTRUdkFKamItaW1nLTNfMTc3MTgyNjAwMjAwMF9uYTFmbl9ZV0p2ZFhRdFltYy5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=DPZHUokzW5W3~x~spQfJ93Geuz2UPPi4wyn1-z5-cB7Qnb4CEnDilYh0lWjqIBsFUgiFCb0UPIIBDSEFpUeAcjsaT3hlyTrGkmOTL3~3iPudpbJz0dGMstHlfjzBe65yJtIUy1bnlz6GpbnQ-B1dmgGI2kpP9zhW8F3DyexGvZVzFhYuBSThOu6J3t8R9Gh3K2lTJppYN3aYO81cJKJJ63JSlnt2VtjZEVSo~HKX27FJhIduRjH1WOsq1hTbqGfkoNLf~llfxuh2eH7UX22vNpOIyAZzzQCcXi4Kkvs5auMHUaz~rOQ7p46FkpkmQAcB881DZK9P-x2o7ywXeElETg__');
+background-size:cover;
+background-position:center;
+
+
+}
+.hero::before{
+content:'';
+position:absolute;
+inset:0;
+background:none(to right,rgba(255,255,255,0.9),rgba(255,255,255,0.8),rgba(255,255,255,0.7));
+}
+.hero-content{position:relative;z-index:10;text-align:center;max-width:48rem;}
+.hero h1{font-size:3rem;margin-bottom:1.5rem;color:white;}
+.hero p{font-size:1.2rem;margin-bottom:2rem;color:white;}
+.btn{padding:0.75rem 2rem;font-size:1rem;border:none;border-radius:8px;curcolor:white;sor:pointer;font-weight:600;}
+.btn-primary{background:#3b82f6;color:white;}
+.btn-primary:hover{background:#2563eb;}
+
+/* HOME SECTION */
+.home-content{padding:6rem 0;background:linear-gradient(135deg,#e0f2fe,#ffffff);}
+.home-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;justify-content:flex-start;align-items:center;}
+@media(max-width:768px){.home-grid{grid-template-columns:1fr;}}
+.home-image img{flex:1;width:100%;border-radius:15px;box-shadow:0 20px 40px rgba(0,0,0,0.15);}
+.home-image {flex: 1;display: flex;flex-direction: column;justify-content: flex-start; padding: 40px;}
+
+
+
+/* TABS */
+.tabbed-section{padding:5rem 0;background:#f9fafb;}
+.tab-navigation{display:flex;justify-content:center;gap:1rem;margin-bottom:4rem;border-bottom:1px solid #e5e7eb;}
+.tab-button{padding:10px 20px;font-weight:600;background:none;border:none;cursor:pointer;}
+.tab-button.active{color:#3b82f6;border-bottom:3px solid #3b82f6;}
+.tab-content{display:none;}
+.tab-content.active{display:block;}
+
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;}
+.service-card{padding:1.5rem;border:1px solid #e5e7eb;border-radius:0.5rem;background:white;}
+.service-card:hover{box-shadow:0 10px 25px rgba(0,0,0,0.1);}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr;}}
+input,textarea{width:100%;padding:10px;border:1px solid #d1d5db;border-radius:6px;margin-bottom:15px;}
+footer{background:#f3f4f6;padding:3rem 0;text-align:center;margin-top:40px;}
+
+.image-slider {
+    overflow: hidden;
+    background: #f9fafb;
+    padding: 40px 0;
+}
+
+.slider-track {
+    display: flex;
+    width: calc(250px * 8);
+    animation: scroll 20s linear infinite;
+}
+
+.slider-track img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+/* Animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+@keyframes bgMove {
+    0% { background-position: center top; }
+    100% { background-position: center bottom; }
+}
+
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="container">
+<div class="logo">
+<img src="ADS LG.png" alt="Logo">
+<div>
+<div class="logo-title">ADS Networking Services</div>
+<div class="tagline">Advanced Secure Services</div>
+</div>
+</div>
+<div class="custom-cursor__cursor"></div>
+<div class="custom-cursor__cursor-two"></div>
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="contact.html">Contact</a>
+</div>
+</div>
+</nav>
+
+
+            <div id="about" class="tab-content active">
+
+                <div class="about-grid">
+<div class="about-image">
+    <img src="C:\Users\SUBBU\Desktop\homepage.jpg" alt="About ADS Networking">
+</div>
+                <div class="about-content">
+
+                      <h2>About ADS Networking Services</h2>
+
+                      <br>  <p>Founded with a mission to revolutionize enterprise networking, ADS Networking Services delivers cutting-edge Network as a Service solutions tailored for businesses of all sizes. We specialize in Annual Maintenance Contracts that ensure your network infrastructure runs seamlessly.</p>
+                        <p>Our team of experienced network engineers combines technical expertise with a customer-first approach. We believe in making complex networking simple, reliable, and cost-effective.</p></br>
+
+
+<br>
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">⚡</span>
+                                <span class="feature-text">24/7 Network Monitoring & Support</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🛡️</span>
+                                <span class="feature-text">Enterprise-Grade Security</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">👥</span>
+                                <span class="feature-text">Dedicated Technical Team</span>
+                            </div>
+                        </div>
+                    </div>
+                </br>
+
+             </div>
+            </div>
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const cursor = document.querySelector(".custom-cursor__cursor");
+    const cursorTwo = document.querySelector(".custom-cursor__cursor-two");
+
+    if (!cursor || !cursorTwo) return;
+
+    document.addEventListener("mousemove", function (e) {
+        cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+        cursorTwo.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    });
+
+    document.querySelectorAll("a, button, .btn-get-started").forEach(el => {
+        el.addEventListener("mouseenter", () => {
+            cursor.classList.add("hover");
+            cursorTwo.classList.add("hover");
+        });
+
+        el.addEventListener("mouseleave", () => {
+            cursor.classList.remove("hover");
+            cursorTwo.classList.remove("hover");
+        });
+    });
+});
+</script>
+
+</body>
+</html>
+
+<!-- Footer -->
+<footer>
+<div class="container">
+<p>&copy; 2026 ADS Networking Services. All rights reserved.</p>
+<p class="footer-subtitle">Enterprise Networking as a Service | Reliable • Secure • Scalable</p>
+</div>
+</footer>
+
+</body>
+</html>

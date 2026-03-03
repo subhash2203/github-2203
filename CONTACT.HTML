@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Contact - Ass Networking Services</title>
+<style>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;color:#1a1a1a;background:#ffffff;line-height:1.6;}
+h1,h2,h3,h4,h5,h6{font-family:'IBM Plex Sans',sans-serif;font-weight:700;}
+.container{width:100%;margin:auto;padding:0 1rem;max-width:1280px;}
+
+   body {
+
+
+            font-family: 'Inter', system-ui, sans-serif;
+            color: #1a1a1a;
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+{
+margin: 0;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: background-image 0.5s ease-in-out;
+        }
+
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
+            font-weight: 700;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 1rem;
+            max-width: 1280px;
+        }
+
+        @media (min-width: 640px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 2rem;
+
+         
+   }
+}
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+            user-select: none;
+            padding: 10px;
+        }
+
+        .left {
+            left: 20px;
+        }
+
+        .right {
+            right: 20px;
+        }        
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+.about-image img {
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+align-items: center;
+}
+
+/* NAVIGATION */
+nav{position:sticky;top:0;z-index:50;background:#1e3a8a;padding:10px 0;border-bottom:1px solid #e5e7eb;}
+nav .container{display:flex;align-items:center;justify-content:space-between;}
+.logo{display:flex;align-items:center;gap:15px;}
+.logo img{height:90px;}
+.logo-title{font-size:22px;font-weight:600;color:white;}
+.tagline{font-size:14px;color:#38bdf8;}
+.nav-links{display:flex;gap:2rem;}
+.nav-links a{color:white;text-decoration:none;font-weight:500;}
+.nav-links a:hover{color:#3b82f6;}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00b4d8;
+}
+
+
+
+
+/* HOME SECTION */
+.home-content{padding:6rem 0;background:linear-gradient(135deg,#e0f2fe,#ffffff);}
+.home-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;justify-content:flex-start;align-items:center;}
+@media(max-width:768px){.home-grid{grid-template-columns:1fr;}}
+.home-image img{flex:1;width:100%;border-radius:15px;box-shadow:0 20px 40px rgba(0,0,0,0.15);}
+.home-image {flex: 1;display: flex;flex-direction: column;justify-content: flex-start; padding: 40px;}
+
+
+
+/* TABS */
+.tabbed-section{padding:5rem 0;background:#f9fafb;}
+.tab-navigation{display:flex;justify-content:center;gap:1rem;margin-bottom:4rem;border-bottom:1px solid #e5e7eb;}
+.tab-button{padding:10px 20px;font-weight:600;background:none;border:none;cursor:pointer;}
+.tab-button.active{color:#3b82f6;border-bottom:3px solid #3b82f6;}
+.tab-content{display:none;}
+.tab-content.active{display:block;}
+
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;}
+.service-card{padding:1.5rem;border:1px solid #e5e7eb;border-radius:0.5rem;background:white;}
+.service-card:hover{box-shadow:0 10px 25px rgba(0,0,0,0.1);}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr;}}
+input,textarea{width:100%;padding:10px;border:1px solid #d1d5db;border-radius:6px;margin-bottom:15px;}
+footer{background:#f3f4f6;padding:3rem 0;text-align:center;margin-top:40px;}
+
+.image-slider {
+    overflow: hidden;
+    background: #f9fafb;
+    padding: 40px 0;
+}
+
+.slider-track {
+    display: flex;
+    width: calc(250px * 8);
+    animation: scroll 20s linear infinite;
+}
+
+.slider-track img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+/* Animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+@keyframes bgMove {
+    0% { background-position: center top; }
+    100% { background-position: center bottom; }
+}
+
+body.custom-cursor {
+  cursor: none;
+}
+
+.custom-cursor__cursor,
+.custom-cursor__cursor-two {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.08s linear;
+  z-index: 9999;
+}
+
+.custom-cursor__cursor {
+  width: 8px;
+  height: 8px;
+  background: #00f0ff;
+}
+
+.custom-cursor__cursor-two {
+  width: 35px;
+  height: 35px;
+  border: 2px solid #00f0ff;
+  transition: transform 0.15s ease-out;
+}
+
+.custom-cursor__cursor.hover,
+.custom-cursor__cursor-two.hover {
+  transform: translate(-50%, -50%) scale(1.5);
+
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="container">
+<div class="logo">
+<img src="ADS LG.png" alt="Logo">
+<div>
+<div class="logo-title">ADS Networking Services</div>
+<div class="tagline">Advanced Secure Services</div>
+</div>
+</div>
+<div class="custom-cursor__cursor"></div>
+<div class="custom-cursor__cursor-two"></div>
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="contact.html">Contact</a>
+</div>
+</div>
+</nav>
+
+ <!-- Contact Tab -->
+            <div id="contact" class="tab-content active">
+                <h2 style="margin-bottom: 3rem;">Get in Touch</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <div>
+                                <p style="font-weight: 600;">Email</p>
+                                <a href="mailto:assservice2203@gmail.com">assservice2203@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <div>
+                                <p style="font-weight: 600;">Phone</p>
+                                <a href="tel:+91 9666819812">+91 9666819812</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                <p style="font-weight: 600;">Address</p>
+                                <p>PlotNo:80 Rukmini Enclave Sundaram Colony Bollaram <br>Secunderabad Hyderabad 500010<br>Telangana</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form" 
+      action="https://formsubmit.co/assservice2203@gmail.com" 
+      method="POST">
+                    <input type="hidden" name="_subject" value="New Enquiry from Website">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Tell us about your networking needs..." required></textarea>
+                        </div>
+ 
+      
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const cursor = document.querySelector(".custom-cursor__cursor");
+    const cursorTwo = document.querySelector(".custom-cursor__cursor-two");
+
+    if (!cursor || !cursorTwo) return;
+
+    document.addEventListener("mousemove", function (e) {
+        cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+        cursorTwo.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    });
+
+    document.querySelectorAll("a, button, .btn-get-started").forEach(el => {
+        el.addEventListener("mouseenter", () => {
+            cursor.classList.add("hover");
+            cursorTwo.classList.add("hover");
+        });
+
+        el.addEventListener("mouseleave", () => {
+            cursor.classList.remove("hover");
+            cursorTwo.classList.remove("hover");
+        });
+    });
+});
+</script>
+
+
+
+<!-- Footer -->
+<footer>
+<div class="container">
+<p>&copy; 2026 ADS Networking Services. All rights reserved.</p>
+<p class="footer-subtitle">Enterprise Networking as a Service | Reliable • Secure • Scalable</p>
+</div>
+</footer>
+
+</body>
+</html>
