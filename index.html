@@ -16,11 +16,22 @@ h1,h2,h3,h4,h5,h6{font-family:'IBM Plex Sans',sans-serif;font-weight:700;}
 .container{width:100%;margin:auto;padding:0 1rem;max-width:1280px;}
 
    body {
+
+
             font-family: 'Inter', system-ui, sans-serif;
             color: #1a1a1a;
             background-color: #ffffff;
             line-height: 1.6;
         }
+{
+margin: 0;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: background-image 0.5s ease-in-out;
+        }
+
 
         h1, h2, h3, h4, h5, h6 {
             font-family: 'IBM Plex Sans', system-ui, sans-serif;
@@ -43,9 +54,73 @@ h1,h2,h3,h4,h5,h6{font-family:'IBM Plex Sans',sans-serif;font-weight:700;}
         @media (min-width: 1024px) {
             .container {
                 padding: 0 2rem;
-            }
+
+         
+   }
+}
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+            user-select: none;
+            padding: 10px;
         }
 
+        .left {
+            left: 20px;
+        }
+
+        .right {
+            right: 20px;
+        }        
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+.about-image img {
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+align-items: center;
+}
+body.custom-cursor {
+  cursor: none;
+}
+
+.custom-cursor__cursor,
+.custom-cursor__cursor-two {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.08s linear;
+  z-index: 9999;
+}
+
+.custom-cursor__cursor {
+  width: 8px;
+  height: 8px;
+  background: #00f0ff;
+}
+
+.custom-cursor__cursor-two {
+  width: 35px;
+  height: 35px;
+  border: 2px solid #00f0ff;
+  transition: transform 0.15s ease-out;
+}
+
+.custom-cursor__cursor.hover,
+.custom-cursor__cursor-two.hover {
+  transform: translate(-50%, -50%) scale(1.5);
+}
 
 /* NAVIGATION */
 nav{position:sticky;top:0;z-index:50;background:#1e3a8a;padding:10px 0;border-bottom:1px solid #e5e7eb;}
@@ -57,29 +132,52 @@ nav .container{display:flex;align-items:center;justify-content:space-between;}
 .nav-links{display:flex;gap:2rem;}
 .nav-links a{color:white;text-decoration:none;font-weight:500;}
 .nav-links a:hover{color:#3b82f6;}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00b4d8;
+}
+
 
 /* HERO */
 .hero{
 position:relative;
-min-height:100vh;
+min-height:75vh;
 display:flex;
 align-items:center;
 justify-content:center;
 overflow:hidden;
-background-image: url('https://private-us-east-1.manuscdn.com/sessionFile/4NR3zyVpdQ4XijkE2gJv7T/sandbox/4RvjnkYqbksvs0e4TvAJjb-img-3_1771826002000_na1fn_YWJvdXQtYmc.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvNE5SM3p5VnBkUTRYaWprRTJnSnY3VC9zYW5kYm94LzRSdmpua1lxYmtzdnMwZTRUdkFKamItaW1nLTNfMTc3MTgyNjAwMjAwMF9uYTFmbl9ZV0p2ZFhRdFltYy5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=DPZHUokzW5W3~x~spQfJ93Geuz2UPPi4wyn1-z5-cB7Qnb4CEnDilYh0lWjqIBsFUgiFCb0UPIIBDSEFpUeAcjsaT3hlyTrGkmOTL3~3iPudpbJz0dGMstHlfjzBe65yJtIUy1bnlz6GpbnQ-B1dmgGI2kpP9zhW8F3DyexGvZVzFhYuBSThOu6J3t8R9Gh3K2lTJppYN3aYO81cJKJJ63JSlnt2VtjZEVSo~HKX27FJhIduRjH1WOsq1hTbqGfkoNLf~llfxuh2eH7UX22vNpOIyAZzzQCcXi4Kkvs5auMHUaz~rOQ7p46FkpkmQAcB881DZK9P-x2o7ywXeElETg__');
+animation: bgMove 10s linear infinite alternate;
+background-image:url('https://private-us-east-1.manuscdn.com/sessionFile/4NR3zyVpdQ4XijkE2gJv7T/sandbox/4RvjnkYqbksvs0e4TvAJjb-img-3_1771826002000_na1fn_YWJvdXQtYmc.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvNE5SM3p5VnBkUTRYaWprRTJnSnY3VC9zYW5kYm94LzRSdmpua1lxYmtzdnMwZTRUdkFKamItaW1nLTNfMTc3MTgyNjAwMjAwMF9uYTFmbl9ZV0p2ZFhRdFltYy5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=DPZHUokzW5W3~x~spQfJ93Geuz2UPPi4wyn1-z5-cB7Qnb4CEnDilYh0lWjqIBsFUgiFCb0UPIIBDSEFpUeAcjsaT3hlyTrGkmOTL3~3iPudpbJz0dGMstHlfjzBe65yJtIUy1bnlz6GpbnQ-B1dmgGI2kpP9zhW8F3DyexGvZVzFhYuBSThOu6J3t8R9Gh3K2lTJppYN3aYO81cJKJJ63JSlnt2VtjZEVSo~HKX27FJhIduRjH1WOsq1hTbqGfkoNLf~llfxuh2eH7UX22vNpOIyAZzzQCcXi4Kkvs5auMHUaz~rOQ7p46FkpkmQAcB881DZK9P-x2o7ywXeElETg__');
 background-size:cover;
 background-position:center;
+
+
 }
 .hero::before{
 content:'';
 position:absolute;
 inset:0;
-background:linear-gradient(to right,rgba(255,255,255,0.9),rgba(255,255,255,0.8),rgba(255,255,255,0.7));
+background:none(to right,rgba(255,255,255,0.9),rgba(255,255,255,0.8),rgba(255,255,255,0.7));
 }
 .hero-content{position:relative;z-index:10;text-align:center;max-width:48rem;}
-.hero h1{font-size:3rem;margin-bottom:1.5rem;}
-.hero p{font-size:1.2rem;margin-bottom:2rem;}
-.btn{padding:0.75rem 2rem;font-size:1rem;border:none;border-radius:8px;cursor:pointer;font-weight:600;}
+.hero h1{font-size:3rem;margin-bottom:1.5rem;color:white;}
+.hero p{font-size:1.2rem;margin-bottom:2rem;color:white;}
+.btn{padding:0.75rem 2rem;font-size:1rem;border:none;border-radius:8px;curcolor:white;sor:pointer;font-weight:600;}
 .btn-primary{background:#3b82f6;color:white;}
 .btn-primary:hover{background:#2563eb;}
 
@@ -91,11 +189,12 @@ background:linear-gradient(to right,rgba(255,255,255,0.9),rgba(255,255,255,0.8),
 .home-image {flex: 1;display: flex;flex-direction: column;justify-content: flex-start; padding: 40px;}
 
 
+
 /* TABS */
 .tabbed-section{padding:5rem 0;background:#f9fafb;}
 .tab-navigation{display:flex;justify-content:center;gap:1rem;margin-bottom:4rem;border-bottom:1px solid #e5e7eb;}
-.tab-button{padding:0.75rem 1.5rem;font-weight:600;background:none;border:none;cursor:pointer;}
-.tab-button.active{color:#3b82f6;border-bottom:2px solid #3b82f6;}
+.tab-button{padding:10px 20px;font-weight:600;background:none;border:none;cursor:pointer;}
+.tab-button.active{color:#3b82f6;border-bottom:3px solid #3b82f6;}
 .tab-content{display:none;}
 .tab-content.active{display:block;}
 
@@ -109,11 +208,50 @@ background:linear-gradient(to right,rgba(255,255,255,0.9),rgba(255,255,255,0.8),
 @media(max-width:768px){.contact-grid{grid-template-columns:1fr;}}
 input,textarea{width:100%;padding:10px;border:1px solid #d1d5db;border-radius:6px;margin-bottom:15px;}
 footer{background:#f3f4f6;padding:3rem 0;text-align:center;margin-top:40px;}
+
+.image-slider {
+    overflow: hidden;
+    background: #f9fafb;
+    padding: 40px 0;
+}
+
+.slider-track {
+    display: flex;
+    width: calc(250px * 8);
+    animation: scroll 20s linear infinite;
+}
+
+.slider-track img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+/* Animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+@keyframes bgMove {
+    0% { background-position: center top; }
+    100% { background-position: center bottom; }
+}
+
+
+
+
 </style>
 </head>
 
 <body>
 
+<!-- Navigation -->
 <nav>
 <div class="container">
 <div class="logo">
@@ -123,194 +261,96 @@ footer{background:#f3f4f6;padding:3rem 0;text-align:center;margin-top:40px;}
 <div class="tagline">Advanced Secure Services</div>
 </div>
 </div>
+<div class="custom-cursor__cursor"></div>
+<div class="custom-cursor__cursor-two"></div>
 <div class="nav-links">
-<a href="#" onclick="switchTab('home')">Home</a>
-<a href="#" onclick="switchTab('about')">About</a>
-<a href="#" onclick="switchTab('services')">Services</a>
-<a href="#" onclick="switchTab('contact')">Contact</a>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="contact.html">Contact</a>
 </div>
 </div>
 </nav>
 
+<!-- Hero Section -->
 <section class="hero">
 <div class="hero-content">
 <h1>Enterprise Networking as a Service</h1>
-
-<p>Simplified network management for modern businesses. Reliable,scalable,and secure connectivity delivered on demand.</p>
+<p>Simplified network management for modern businesses. Reliable, scalable, and secure connectivity delivered on demand.</p>
+<div class="hero-buttons">
+<button class="btn btn-primary" 
+        onclick="window.location.href='consultation1.html'">
+        Get Started
+    </button>
+</div>
 </div>
 </section>
+
+<!-- Animated Home Section -->
 <section class="home-content">
-<div class="container home-grid">
-<div>
-      <h2>Powering Your Business with Secure Networking</h2>
-                <p>
-                    ADS Networking Services delivers reliable, scalable, and secure 
-                    networking solutions for modern enterprises. We specialize in routing, switching,firewall security, VPN setup,
-                    and AMC support.
-                </p>            
-</div>
-<div class="home-image">
-<img src="SW1.jpg" alt="home-image">
-</div>
-</div>
-</section>
+<div class="container">
+<div class="home-grid">
 
-</section>
-    <!-- Tabbed Section -->
-    <section class="tabbed-section">
-        <div class="container">
-            <!-- Tab Navigation -->
-            <div class="tab-navigation">
-                <button class="tab-button active" onclick="switchTab('home')">Home</button>                
-                <button class="tab-button" onclick="switchTab('about')">About</button>
-                <button class="tab-button" onclick="switchTab('services')">Services</button>
-                <button class="tab-button" onclick="switchTab('contact')">Contact</button>
-            </div>
-
-            <!-- About Tab -->
-            <div id="about" class="tab-content active">
-                <div class="about-grid">
-                    <div class="about-content">
-                        <h2>About ADS Networking Services</h2>
-                        <p>Founded with a mission to revolutionize enterprise networking, ADS Networking Services delivers cutting-edge Network as a Service solutions tailored for businesses of all sizes. We specialize in Annual Maintenance Contracts that ensure your network infrastructure runs seamlessly.</p>
-                        <p>Our team of experienced network engineers combines technical expertise with a customer-first approach. We believe in making complex networking simple, reliable, and cost-effective.</p>
+<div class="home-text">
+<h2>Powering Your Business with Secure Networking</h2><br>
+<p>
+ADS Networking Services delivers reliable, scalable, and secure 
+networking solutions for modern enterprises.We specialize in routing, switching,firewall security, VPN setup,
+and AMC support.
+</p></br>
 <br>
-                        <div class="about-features">
-                            <div class="feature-item">
-                                <span class="feature-icon">⚡</span>
-                                <span class="feature-text">24/7 Network Monitoring & Support</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-icon">🛡️</span>
-                                <span class="feature-text">Enterprise-Grade Security</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-icon">👥</span>
-                                <span class="feature-text">Dedicated Technical Team</span>
-                            </div>
-                        </div>
-                    </div>
-                </br>
-                    <div class="about-image"></div>
-                </div>
-            </div>
+<a href="services.html" class="btn btn-primary animate-btn">
+Explore Our Services
+</a></br>
+</div>
 
-            <!-- Services Tab -->
-            <div id="services" class="tab-content">
-                <h2 style="margin-bottom: 3rem;">Our Services</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">🌐</div>
-                        <h3>Network Design & Setup</h3>
-                        <p>Custom network architecture tailored to your business requirements with scalability in mind.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">⏰</div>
-                        <h3>24/7 Monitoring</h3>
-                        <p>Continuous network monitoring with proactive issue detection and rapid response times.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">🔒</div>
-                        <h3>Security Management</h3>
-                        <p>Comprehensive security protocols including firewalls, VPNs, and threat detection systems.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">⚡</div>
-                        <h3>Performance Optimization</h3>
-                        <p>Regular optimization and tuning to ensure maximum network performance and reliability.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">👨‍💼</div>
-                        <h3>Technical Support</h3>
-                        <p>Expert technical team available for consultation, troubleshooting, and system upgrades.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">📋</div>
-                        <h3>Maintenance Contracts</h3>
-                        <p>Flexible Annual Maintenance Contracts with guaranteed uptime and priority support.</p>
-                    </div>
-                </div>
-            </div>
+<section class="image-slider">
+    <div class="slider-track">
+        <img src="switch.jpg" alt="Switch">
+        <img src="router.jpg" alt="Router">
+        <img src="firewall.jpg" alt="Firewall">
+        <img src="server.png" alt="Server">
+</div>
+</div>
 
-            <!-- Contact Tab -->
-            <div id="contact" class="tab-content">
-                <h2 style="margin-bottom: 3rem;">Get in Touch</h2>
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <h3>Contact Information</h3>
-                        <div class="contact-item">
-                            <span class="contact-icon">✉️</span>
-                            <div>
-                                <p style="font-weight: 600;">Email</p>
-                                <a href="mailto:assservice2203@gmail.com">assservice2203@gmail.com</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">📞</span>
-                            <div>
-                                <p style="font-weight: 600;">Phone</p>
-                                <a href="tel:+91 9666819812">+1 91 9666819812</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">📍</span>
-                            <div>
-                                <p style="font-weight: 600;">Address</p>
-                                <p>PlotNo:80 Rukmini Enclave Sundaram Colony Bollaram <br>Secunderabad Hyderabad 500010<br>Telangana</p>
-                            </div>
-                        </div>
-                    </div>
-                    <form class="contact-form" 
-      action="https://formsubmit.co/assservice2203@gmail.com" 
-      method="POST">
-                    <input type="hidden" name="_subject" value="New Enquiry from Website">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_template" value="table">
-
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" placeholder="Your name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" placeholder="your@email.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" placeholder="Tell us about your networking needs..." required></textarea>
-                        </div>
- 
-      
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 ADS Networking Services. All rights reserved.</p>
-            <p class="footer-subtitle">Enterprise Networking as a Service | Reliable • Secure • Scalable</p>
-        </div>
-    </footer>
-
+</div>
+</div>
+</section>
 <script>
-function switchTab(tabName) {
+document.addEventListener("DOMContentLoaded", function () {
+    const cursor = document.querySelector(".custom-cursor__cursor");
+    const cursorTwo = document.querySelector(".custom-cursor__cursor-two");
 
-    // Hide all tabs
-    const tabs = document.querySelectorAll('.tab-content');
-    tabs.forEach(tab => tab.classList.remove('active'));
+    if (!cursor || !cursorTwo) return;
 
-    // Show selected tab
-    document.getElementById(tabName).classList.add('active');
-
-    // Scroll to section
-    document.querySelector('.tabbed-section').scrollIntoView({
-        behavior: 'smooth'
+    document.addEventListener("mousemove", function (e) {
+        cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+        cursorTwo.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
     });
-}
+
+    document.querySelectorAll("a, button, .btn-get-started").forEach(el => {
+        el.addEventListener("mouseenter", () => {
+            cursor.classList.add("hover");
+            cursorTwo.classList.add("hover");
+        });
+
+        el.addEventListener("mouseleave", () => {
+            cursor.classList.remove("hover");
+            cursorTwo.classList.remove("hover");
+        });
+    });
+});
 </script>
+
+</body>
+</html>
+<!-- Footer -->
+<footer>
+<div class="container">
+<p>&copy; 2026 ADS Networking Services. All rights reserved.</p>
+<p class="footer-subtitle">Enterprise Networking as a Service | Reliable • Secure • Scalable</p>
+</div>
+</footer>
+
 </body>
 </html>
