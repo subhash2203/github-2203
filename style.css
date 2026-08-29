@@ -1457,7 +1457,7 @@ footer {
    ============================================================ */
 .whatsapp-float {
     position: fixed;
-    bottom: 24px;
+    bottom: 34px;
     right: 24px;
     width: 60px;
     height: 60px;
@@ -1496,7 +1496,7 @@ footer {
 
 @media (max-width: 768px) {
     .whatsapp-float {
-        bottom: 20px;
+        bottom: 30px;
         right: 20px;
         width: 54px;
         height: 54px;
@@ -1512,7 +1512,7 @@ footer {
    ============================================================ */
 .chatbot-widget {
     position: fixed;
-    bottom: 24px;
+    bottom: 34px;
     right: 96px;
     z-index: 9997;
 }
@@ -1587,7 +1587,7 @@ footer {
 /* Chatbot Window */
 .chatbot-window {
     position: absolute;
-    bottom: 72px;
+    bottom: 82px;
     right: 0;
     width: 380px;
     height: 520px;
