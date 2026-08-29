@@ -4,354 +4,359 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ADS Networking Service - Enterprise Networking as a Service</title>
+<link rel="icon" type="image/png" href="ADS LG.png">
+<link rel="apple-touch-icon" href="ADS LG.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Inter',sans-serif;color:#1a1a1a;background:#ffffff;line-height:1.6;}
-h1,h2,h3,h4,h5,h6{font-family:'IBM Plex Sans',sans-serif;font-weight:700;}
-.container{width:100%;margin:auto;padding:0 1rem;max-width:1280px;}
-
-   body {
-
-
-            font-family: 'Inter', system-ui, sans-serif;
-            color: #1a1a1a;
-            background-color: #ffffff;
-            line-height: 1.6;
-        }
-{
-margin: 0;
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            transition: background-image 0.5s ease-in-out;
-        }
-
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'IBM Plex Sans', system-ui, sans-serif;
-            font-weight: 700;
-        }
-
-        .container {
-            width: 100%;
-            margin: 0 auto;
-            padding: 0 1rem;
-            max-width: 1280px;
-        }
-
-        @media (min-width: 640px) {
-            .container {
-                padding: 0 1.5rem;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .container {
-                padding: 0 2rem;
-
-         
-   }
-}
-
-        .arrow {
-            position: absolute;
-            top: 50%;
-            font-size: 40px;
-            color: white;
-            cursor: pointer;
-            user-select: none;
-            padding: 10px;
-        }
-
-        .left {
-            left: 20px;
-        }
-
-        .right {
-            right: 20px;
-        }        
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
-}
-.about-image img {
-    width: 80%;
-    border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-align-items: center;
-}
-body.custom-cursor {
-  cursor: none;
-}
-
-.custom-cursor__cursor,
-.custom-cursor__cursor-two {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: transform 0.08s linear;
-  z-index: 9999;
-}
-
-.custom-cursor__cursor {
-  width: 8px;
-  height: 8px;
-  background: #00f0ff;
-}
-
-.custom-cursor__cursor-two {
-  width: 35px;
-  height: 35px;
-  border: 2px solid #00f0ff;
-  transition: transform 0.15s ease-out;
-}
-
-.custom-cursor__cursor.hover,
-.custom-cursor__cursor-two.hover {
-  transform: translate(-50%, -50%) scale(1.5);
-}
-
-/* NAVIGATION */
-nav{position:sticky;top:0;z-index:50;background:#1e3a8a;padding:10px 0;border-bottom:1px solid #e5e7eb;}
-nav .container{display:flex;align-items:center;justify-content:space-between;}
-.logo{display:flex;align-items:center;gap:15px;}
-.logo img{height:90px;}
-.logo-title{font-size:22px;font-weight:600;color:white;}
-.tagline{font-size:14px;color:#38bdf8;}
-.nav-links{display:flex;gap:2rem;}
-.nav-links a{color:white;text-decoration:none;font-weight:500;}
-.nav-links a:hover{color:#3b82f6;}
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 25px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    transition: 0.3s;
-}
-
-nav ul li a:hover {
-    color: #00b4d8;
-}
-
-
-/* HERO */
-.hero{
-position:relative;
-min-height:75vh;
-display:flex;
-align-items:center;
-justify-content:center;
-overflow:hidden;
-animation: bgMove 10s linear infinite alternate;
-background-image:url('https://private-us-east-1.manuscdn.com/sessionFile/4NR3zyVpdQ4XijkE2gJv7T/sandbox/4RvjnkYqbksvs0e4TvAJjb-img-3_1771826002000_na1fn_YWJvdXQtYmc.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvNE5SM3p5VnBkUTRYaWprRTJnSnY3VC9zYW5kYm94LzRSdmpua1lxYmtzdnMwZTRUdkFKamItaW1nLTNfMTc3MTgyNjAwMjAwMF9uYTFmbl9ZV0p2ZFhRdFltYy5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=DPZHUokzW5W3~x~spQfJ93Geuz2UPPi4wyn1-z5-cB7Qnb4CEnDilYh0lWjqIBsFUgiFCb0UPIIBDSEFpUeAcjsaT3hlyTrGkmOTL3~3iPudpbJz0dGMstHlfjzBe65yJtIUy1bnlz6GpbnQ-B1dmgGI2kpP9zhW8F3DyexGvZVzFhYuBSThOu6J3t8R9Gh3K2lTJppYN3aYO81cJKJJ63JSlnt2VtjZEVSo~HKX27FJhIduRjH1WOsq1hTbqGfkoNLf~llfxuh2eH7UX22vNpOIyAZzzQCcXi4Kkvs5auMHUaz~rOQ7p46FkpkmQAcB881DZK9P-x2o7ywXeElETg__');
-background-size:cover;
-background-position:center;
-
-
-}
-.hero::before{
-content:'';
-position:absolute;
-inset:0;
-background:none(to right,rgba(255,255,255,0.9),rgba(255,255,255,0.8),rgba(255,255,255,0.7));
-}
-.hero-content{position:relative;z-index:10;text-align:center;max-width:48rem;}
-.hero h1{font-size:3rem;margin-bottom:1.5rem;color:white;}
-.hero p{font-size:1.2rem;margin-bottom:2rem;color:white;}
-.btn{padding:0.75rem 2rem;font-size:1rem;border:none;border-radius:8px;curcolor:white;sor:pointer;font-weight:600;}
-.btn-primary{background:#3b82f6;color:white;}
-.btn-primary:hover{background:#2563eb;}
-
-/* HOME SECTION */
-.home-content{padding:6rem 0;background:linear-gradient(135deg,#e0f2fe,#ffffff);}
-.home-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;justify-content:flex-start;align-items:center;}
-@media(max-width:768px){.home-grid{grid-template-columns:1fr;}}
-.home-image img{flex:1;width:100%;border-radius:15px;box-shadow:0 20px 40px rgba(0,0,0,0.15);}
-.home-image {flex: 1;display: flex;flex-direction: column;justify-content: flex-start; padding: 40px;}
-
-
-
-/* TABS */
-.tabbed-section{padding:5rem 0;background:#f9fafb;}
-.tab-navigation{display:flex;justify-content:center;gap:1rem;margin-bottom:4rem;border-bottom:1px solid #e5e7eb;}
-.tab-button{padding:10px 20px;font-weight:600;background:none;border:none;cursor:pointer;}
-.tab-button.active{color:#3b82f6;border-bottom:3px solid #3b82f6;}
-.tab-content{display:none;}
-.tab-content.active{display:block;}
-
-/* SERVICES */
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;}
-.service-card{padding:1.5rem;border:1px solid #e5e7eb;border-radius:0.5rem;background:white;}
-.service-card:hover{box-shadow:0 10px 25px rgba(0,0,0,0.1);}
-
-/* CONTACT */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;}
-@media(max-width:768px){.contact-grid{grid-template-columns:1fr;}}
-input,textarea{width:100%;padding:10px;border:1px solid #d1d5db;border-radius:6px;margin-bottom:15px;}
-footer{background:#f3f4f6;padding:3rem 0;text-align:center;margin-top:40px;}
-
-.image-slider {
-    overflow: hidden;
-    background: #f9fafb;
-    padding: 40px 0;
-}
-
-.slider-track {
-    display: flex;
-    width: calc(250px * 8);
-    animation: scroll 20s linear infinite;
-}
-
-.slider-track img {
-    width: 250px;
-    height: 180px;
-    object-fit: cover;
-    margin-right: 20px;
-    border-radius: 10px;
-}
-
-/* Animation */
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
-@keyframes bgMove {
-    0% { background-position: center top; }
-    100% { background-position: center bottom; }
-}
-
-
-
-
-</style>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=Inter:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="preload" href="style.css" as="style">
+<link rel="preload" href="script.js" as="script">
+<link rel="stylesheet" href="style.css?v=4.1">
 </head>
-
 <body>
 
 <!-- Navigation -->
 <nav>
 <div class="container">
 <div class="logo">
-<img src="ADS LG.png" alt="Logo">
-<div>
-<div class="logo-title">ADS Networking Service</div>
+<img src="ADS LG.png" alt="ADS Networking Service Logo">
+<div class="logo-text">
+<div class="logo-title"><span class="ads-word">ADS</span> Networking Service</div>
 <div class="tagline">Advanced Secure Services</div>
 </div>
 </div>
-<div class="custom-cursor__cursor"></div>
-<div class="custom-cursor__cursor-two"></div>
+<button class="menu-toggle" aria-label="Toggle navigation">
+<span></span><span></span><span></span>
+</button>
 <div class="nav-links">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="services.html">Services</a>
-<a href="contact.html">Contact</a>
+<a href="index.html" class="nav-link">Home</a>
+<a href="about.html" class="nav-link">About</a>
+<a href="services.html" class="nav-link">Services</a>
+<a href="contact.html" class="nav-link">Contact</a>
 </div>
 </div>
 </nav>
 
 <!-- Hero Section -->
-<section class="hero">
+<section class="hero" id="home">
+<!-- Background Images -->
+<div class="hero-bg-images">
+<img src="adsbg.png" alt="Networking" class="bg-slide active">
+<img src="homepage.jpg" alt="Network" class="bg-slide">
+<img src="adsbackground.png" alt="Infrastructure" class="bg-slide">
+<img src="SW1.jpg" alt="Switches" class="bg-slide">
+
+</div>
+
+<!-- Navigation Arrows -->
+<button class="hero-arrow hero-prev" id="heroPrev" aria-label="Previous image">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="15 18 9 12 15 6"></polyline>
+</svg>
+</button>
+<button class="hero-arrow hero-next" id="heroNext" aria-label="Next image">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="9 18 15 12 9 6"></polyline>
+</svg>
+</button>
+
+<!-- Slide Indicators -->
+<div class="hero-indicators" id="heroIndicators">
+<span class="indicator active" data-slide="0"></span>
+</div>
+
 <div class="hero-content">
-<h1>Enterprise Networking as a Service</h1>
+<h1>Enterprise Networking <span class="ads-highlight">as a Service</span></h1>
 <p>Simplified network management for modern businesses. Reliable, scalable, and secure connectivity delivered on demand.</p>
 <div class="hero-buttons">
-<button class="btn btn-primary" 
-        onclick="window.location.href='consultation1.html'">
-        Get Started
-    </button>
+<button class="btn btn-primary" onclick="window.location.href='consultation.html'">
+Get Started
+</button>
 </div>
 </div>
 </section>
 
 <!-- Animated Home Section -->
-<section class="home-content">
+<section class="home-content" id="features">
 <div class="container">
 <div class="home-grid">
 
-<div class="home-text">
-<h2>Powering Your Business with Secure Networking</h2><br>
+<div class="home-text reveal">
+<h2>Powering Your Business with <span>Secure Networking</span></h2><br>
 <p>
-ADS Networking Services is your strategic partner for mission-critical networking infrastructure. 
-We specialize in designing, deploying, and managing secure, high-availability networks through our proficiency in 
-enterprise-grade routing, intelligent switching, multi-layered firewall defense, secure remote access (VPN), 
+ADS Networking Services is your strategic partner for mission-critical networking infrastructure.
+We specialize in designing, deploying, and managing secure, high-availability networks through our proficiency in
+enterprise-grade routing, intelligent switching, multi-layered firewall defense, secure remote access (VPN),
 and comprehensive AMC programs, safeguarding your operations and fostering digital transformation.
-</p></br>
-<br>
-<a href="services.html" class="btn btn-primary animate-btn">
+</p><br>
+<a href="services.html" class="btn btn-primary">
 Explore Our Services
-</a></br>
+</a><br>
 </div>
 
-<section class="image-slider">
-    <div class="slider-track">
-        <img src="switch.jpg" alt="Switch">
-        <img src="router.jpg" alt="Router">
-        <img src="firewall.jpg" alt="Firewall">
-        <img src="server.png" alt="Server">
+<div class="image-slider reveal">
+<div class="slider-track">
+<img src="switch.jpg" alt="Switch">
+<img src="router.jpg" alt="Router">
+<img src="firewall.jpg" alt="Firewall">
+<img src="server.png" alt="Server">
 </div>
 </div>
-
 </div>
 </div>
 </section>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const cursor = document.querySelector(".custom-cursor__cursor");
-    const cursorTwo = document.querySelector(".custom-cursor__cursor-two");
 
-    if (!cursor || !cursorTwo) return;
+<!-- About Section -->
+<section class="about-section" id="about">
+<div class="container">
+<div class="about-grid">
+<div class="about-image reveal">
+<img src="server.png" alt="Enterprise Networking Infrastructure">
+</div>
+<div class="about-text reveal">
+<h2>Engineering Secure, <span>Scalable Connectivity</span></h2>
+<p>
+ADS Networking Services specializes in designing, deploying, and managing secure, high-availability networks for modern businesses. Our deep technical expertise spans enterprise-grade routing, intelligent switching, multi-layered firewall defense, and secure remote access (VPN).
+</p>
+<p>
+We help organizations safeguard their mission-critical operations, boost performance, and seamlessly foster digital transformation through robust annual maintenance contract (AMC) programs and expert consulting.
+</p>
+<a href="about.html" class="btn btn-outline">Learn More About Us</a>
+</div>
+</div>
+</div>
+</section>
 
-    document.addEventListener("mousemove", function (e) {
-        cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-        cursorTwo.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-    });
+<!-- Services Section -->
+<section class="services-section" id="services">
+<div class="container">
+<div class="section-header reveal">
+<p class="eyebrow">Enterprise Solutions</p>
+<h2>Our <span>Service Portfolio</span></h2>
+<p>Comprehensive networking, security, and infrastructure management tailored for modern businesses.</p>
+</div>
 
-    document.querySelectorAll("a, button, .btn-get-started").forEach(el => {
-        el.addEventListener("mouseenter", () => {
-            cursor.classList.add("hover");
-            cursorTwo.classList.add("hover");
-        });
+<div class="services-grid">
+<div class="service-card reveal">
+<div class="service-icon">📡</div>
+<h3>Enterprise Routing</h3>
+<p>High-performance routing architectures designed to ensure seamless data flow, low latency, and maximum uptime across multiple locations.</p>
+<ul>
+<li>Multi-protocol routing</li>
+<li>Load balancing</li>
+<li>Failover configurations</li>
+</ul>
+<a href="services.html" class="service-link">Learn More →</a>
+</div>
 
-        el.addEventListener("mouseleave", () => {
-            cursor.classList.remove("hover");
-            cursorTwo.classList.remove("hover");
-        });
-    });
-});
-</script>
+<div class="service-card reveal">
+<div class="service-icon">🔀</div>
+<h3>Intelligent Switching</h3>
+<p>Advanced LAN switching solutions optimized for traffic prioritization, scalability, and robust internal network performance.</p>
+<ul>
+<li>VLAN management</li>
+<li>Quality of Service (QoS)</li>
+<li>Power over Ethernet (PoE)</li>
+</ul>
+<a href="services.html" class="service-link">Learn More →</a>
+</div>
 
-</body>
-</html>
+<div class="service-card reveal">
+<div class="service-icon">🛡️</div>
+<h3>Firewall Defense</h3>
+<p>Multi-layered perimeter and internal security systems to safeguard your mission-critical operations from evolving cyber threats.</p>
+<ul>
+<li>Next-gen firewall</li>
+<li>IDS/IPS integration</li>
+<li>Threat intelligence</li>
+</ul>
+<a href="services.html" class="service-link">Learn More →</a>
+</div>
+
+<div class="service-card reveal">
+<div class="service-icon">🔒</div>
+<h3>Secure Remote Access (VPN)</h3>
+<p>Encrypted tunneling solutions enabling your remote workforce to connect securely to corporate resources from anywhere.</p>
+<ul>
+<li>SSL VPN</li>
+<li>IPsec VPN</li>
+<li>Multi-factor authentication</li>
+</ul>
+<a href="services.html" class="service-link">Learn More →</a>
+</div>
+
+<div class="service-card reveal">
+<div class="service-icon">📋</div>
+<h3>AMC Programs</h3>
+<p>Comprehensive Annual Maintenance Contracts offering proactive monitoring, rapid troubleshooting, and complete peace of mind.</p>
+<ul>
+<li>24/7 monitoring</li>
+<li>Regular updates</li>
+<li>Performance optimization</li>
+</ul>
+<a href="services.html" class="service-link">Learn More →</a>
+</div>
+
+<div class="service-card reveal">
+<div class="service-icon">💡</div>
+<h3>Network Consulting</h3>
+<p>Strategic architecture design and infrastructure audits to future-proof your digital transformation initiatives.</p>
+<ul>
+<li>Network assessment</li>
+<li>Architecture design</li>
+<li>Migration planning</li>
+</ul>
+<a href="services.html" class="service-link">Learn More →</a>
+</div>
+
+<div class="service-card reveal">
+<div class="service-icon">📹</div>
+<h3>CCTV & Video Surveillance</h3>
+<p>Comprehensive video surveillance solutions to protect your premises with advanced AI-powered monitoring and remote viewing capabilities.</p>
+<ul>
+<li>HD/IP camera installation</li>
+<li>24/7 remote monitoring</li>
+<li>Cloud & local storage</li>
+<li>Motion detection & alerts</li>
+<li>Mobile app access</li>
+</ul>
+<a href="services.html" class="service-link">Learn More →</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section" id="consultation">
+<div class="container">
+<div class="cta-grid">
+<div class="cta-content reveal">
+<h2>Ready to Transform Your Network Infrastructure?</h2>
+<p>Our expert team is ready to design and implement the perfect networking solution for your business needs.</p>
+<div class="cta-stats">
+<div class="cta-stat">
+<div class="cta-stat-number">24/7</div>
+<div class="cta-stat-label">Support</div>
+</div>
+<div class="cta-stat">
+<div class="cta-stat-number">99.9%</div>
+<div class="cta-stat-label">Uptime</div>
+</div>
+<div class="cta-stat">
+<div class="cta-stat-number">250+</div>
+<div class="cta-stat-label">Clients</div>
+</div>
+</div>
+</div>
+<div class="cta-action reveal">
+<a href="consultation.html" class="btn btn-primary btn-large">Schedule Consultation</a>
+</div>
+</div>
+</div>
+</section>
+
 <!-- Footer -->
 <footer>
 <div class="container">
+<div class="footer-grid">
+<div class="footer-col">
+<div class="footer-brand">
+<div class="logo">
+<img src="ADS LG.png" alt="ADS Networking Service Logo">
+<div class="logo-text">
+<div class="logo-title"><span class="ads-word">ADS</span> Networking Service</div>
+<div class="tagline">Advanced Secure Services</div>
+</div>
+</div>
+<p class="footer-tagline">Enterprise Networking as a Service</p>
+</div>
 <p>&copy; 2026 ADS Networking Service. All rights reserved.</p>
-<p class="footer-subtitle">Enterprise Networking as a Service | Reliable • Secure • Scalable</p>
+<p class="footer-subtitle">Reliable • Secure • Scalable</p>
+</div>
+
+<div class="footer-col">
+<h4>Navigation</h4>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="contact.html">Contact</a>
+<a href="consultation.html">Consultation</a>
+</div>
+
+<div class="footer-col">
+<h4>Contact</h4>
+<p><a href="mailto:security@adsnetworkingservice.co.in">security@adsnetworkingservice.co.in</a></p>
+<p><a href="tel:+919666819812">+91 96668 19812</a></p>
+<p>Enterprise Solutions Center</p>
+</div>
+</div>
 </div>
 </footer>
 
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919666819812?text=Hi%2C%20I%27m%20interested%20in%20your%20enterprise%20networking%20services" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="#fff">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+</svg>
+</a>
+
+<!-- Chatbot Widget -->
+<div class="chatbot-widget" id="chatbotWidget">
+<button class="chatbot-toggle" id="chatbotToggle" aria-label="Open chat">
+<svg class="chat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+</svg>
+<svg class="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<line x1="18" y1="6" x2="6" y2="18"></line>
+<line x1="6" y1="6" x2="18" y2="18"></line>
+</svg>
+<span class="chatbot-notification" id="chatbotNotification">1</span>
+</button>
+
+<div class="chatbot-window" id="chatbotWindow">
+<div class="chatbot-header">
+<div class="chatbot-avatar">🤖</div>
+<div class="chatbot-info">
+<h4>ADS Assistant</h4>
+<span class="chatbot-status"><span class="status-dot"></span> Online</span>
+</div>
+<button class="chatbot-minimize" id="chatbotMinimize" aria-label="Minimize chat">−</button>
+</div>
+
+<div class="chatbot-messages" id="chatbotMessages">
+<div class="chat-message bot">
+<div class="message-content">
+<p>👋 Hi there! Welcome to <strong>ADS Networking Service</strong>.</p>
+<p>How can I help you today?</p>
+</div>
+<span class="message-time">Now</span>
+</div>
+
+<div class="quick-replies" id="quickReplies">
+<button class="quick-reply" data-reply="services">Our Services</button>
+<button class="quick-reply" data-reply="pricing">Pricing</button>
+<button class="quick-reply" data-reply="consultation">Free Consultation</button>
+<button class="quick-reply" data-reply="support">Technical Support</button>
+<button class="quick-reply" data-reply="contact">Contact Info</button>
+</div>
+</div>
+
+<form class="chatbot-input" id="chatbotForm">
+<input type="text" id="chatbotInput" placeholder="Type your message..." autocomplete="off" required>
+<button type="submit" aria-label="Send message">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<line x1="22" y1="2" x2="11" y2="13"></line>
+<polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+</svg>
+</button>
+</form>
+
+<div class="chatbot-footer">
+Powered by <strong>ADS Networking Service</strong>
+</div>
+</div>
+</div>
+
+<script src="script.js?v=3.0"></script>
 </body>
 </html>
