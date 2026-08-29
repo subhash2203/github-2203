@@ -1,334 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Contact -ADS Networking Service</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Inter',sans-serif;color:#1a1a1a;background:#ffffff;line-height:1.6;}
-h1,h2,h3,h4,h5,h6{font-family:'IBM Plex Sans',sans-serif;font-weight:700;}
-.container{width:100%;margin:auto;padding:0 1rem;max-width:1280px;}
-
-   body {
-
-
-            font-family: 'Inter', system-ui, sans-serif;
-            color: #1a1a1a;
-            background-color: #ffffff;
-            line-height: 1.6;
-        }
-{
-margin: 0;
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            transition: background-image 0.5s ease-in-out;
-        }
-
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'IBM Plex Sans', system-ui, sans-serif;
-            font-weight: 700;
-        }
-
-        .container {
-            width: 100%;
-            margin: 0 auto;
-            padding: 0 1rem;
-            max-width: 1280px;
-        }
-
-        @media (min-width: 640px) {
-            .container {
-                padding: 0 1.5rem;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .container {
-                padding: 0 2rem;
-
-         
-   }
-}
-
-        .arrow {
-            position: absolute;
-            top: 50%;
-            font-size: 40px;
-            color: white;
-            cursor: pointer;
-            user-select: none;
-            padding: 10px;
-        }
-
-        .left {
-            left: 20px;
-        }
-
-        .right {
-            right: 20px;
-        }        
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
-}
-.about-image img {
-    width: 80%;
-    border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-align-items: center;
-}
-
-/* NAVIGATION */
-nav{position:sticky;top:0;z-index:50;background:#1e3a8a;padding:10px 0;border-bottom:1px solid #e5e7eb;}
-nav .container{display:flex;align-items:center;justify-content:space-between;}
-.logo{display:flex;align-items:center;gap:15px;}
-.logo img{height:90px;}
-.logo-title{font-size:22px;font-weight:600;color:white;}
-.tagline{font-size:14px;color:#38bdf8;}
-.nav-links{display:flex;gap:2rem;}
-.nav-links a{color:white;text-decoration:none;font-weight:500;}
-.nav-links a:hover{color:#3b82f6;}
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 25px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    transition: 0.3s;
-}
-
-nav ul li a:hover {
-    color: #00b4d8;
-}
-
-
-
-
-/* HOME SECTION */
-.home-content{padding:6rem 0;background:linear-gradient(135deg,#e0f2fe,#ffffff);}
-.home-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;justify-content:flex-start;align-items:center;}
-@media(max-width:768px){.home-grid{grid-template-columns:1fr;}}
-.home-image img{flex:1;width:100%;border-radius:15px;box-shadow:0 20px 40px rgba(0,0,0,0.15);}
-.home-image {flex: 1;display: flex;flex-direction: column;justify-content: flex-start; padding: 40px;}
-
-
-
-/* TABS */
-.tabbed-section{padding:5rem 0;background:#f9fafb;}
-.tab-navigation{display:flex;justify-content:center;gap:1rem;margin-bottom:4rem;border-bottom:1px solid #e5e7eb;}
-.tab-button{padding:10px 20px;font-weight:600;background:none;border:none;cursor:pointer;}
-.tab-button.active{color:#3b82f6;border-bottom:3px solid #3b82f6;}
-.tab-content{display:none;}
-.tab-content.active{display:block;}
-
-/* SERVICES */
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;}
-.service-card{padding:1.5rem;border:1px solid #e5e7eb;border-radius:0.5rem;background:white;}
-.service-card:hover{box-shadow:0 10px 25px rgba(0,0,0,0.1);}
-
-/* CONTACT */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;}
-@media(max-width:768px){.contact-grid{grid-template-columns:1fr;}}
-input,textarea{width:100%;padding:10px;border:1px solid #d1d5db;border-radius:6px;margin-bottom:15px;}
-footer{background:#f3f4f6;padding:3rem 0;text-align:center;margin-top:40px;}
-
-.image-slider {
-    overflow: hidden;
-    background: #f9fafb;
-    padding: 40px 0;
-}
-
-.slider-track {
-    display: flex;
-    width: calc(250px * 8);
-    animation: scroll 20s linear infinite;
-}
-
-.slider-track img {
-    width: 250px;
-    height: 180px;
-    object-fit: cover;
-    margin-right: 20px;
-    border-radius: 10px;
-}
-
-/* Animation */
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
-@keyframes bgMove {
-    0% { background-position: center top; }
-    100% { background-position: center bottom; }
-}
-
-body.custom-cursor {
-  cursor: none;
-}
-
-.custom-cursor__cursor,
-.custom-cursor__cursor-two {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: transform 0.08s linear;
-  z-index: 9999;
-}
-
-.custom-cursor__cursor {
-  width: 8px;
-  height: 8px;
-  background: #00f0ff;
-}
-
-.custom-cursor__cursor-two {
-  width: 35px;
-  height: 35px;
-  border: 2px solid #00f0ff;
-  transition: transform 0.15s ease-out;
-}
-
-.custom-cursor__cursor.hover,
-.custom-cursor__cursor-two.hover {
-  transform: translate(-50%, -50%) scale(1.5);
-
-
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - ADS Networking Service</title>
+<link rel="icon" type="image/png" href="ADS LG.png">
+<link rel="apple-touch-icon" href="ADS LG.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=Inter:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=4.1">
 </head>
-
 <body>
 
+<!-- Navigation -->
 <nav>
 <div class="container">
 <div class="logo">
-<img src="ADS LG.png" alt="Logo">
-<div>
-<div class="logo-title">ADS Networking Service</div>
+<img src="ADS LG.png" alt="ADS Networking Service Logo">
+<div class="logo-text">
+<div class="logo-title"><span class="ads-word">ADS</span> Networking Service</div>
 <div class="tagline">Advanced Secure Services</div>
 </div>
 </div>
-<div class="custom-cursor__cursor"></div>
-<div class="custom-cursor__cursor-two"></div>
+<button class="menu-toggle" aria-label="Toggle navigation">
+<span></span><span></span><span></span>
+</button>
 <div class="nav-links">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="services.html">Services</a>
-<a href="contact.html">Contact</a>
+<a href="index.html" class="nav-link">Home</a>
+<a href="about.html" class="nav-link">About</a>
+<a href="services.html" class="nav-link">Services</a>
+<a href="contact.html" class="nav-link active">Contact</a>
 </div>
 </div>
 </nav>
 
- <!-- Contact Tab -->
-            <div id="contact" class="tab-content active">
-                <h2 style="margin-bottom: 3rem;">Contact ADS Networking</h2>
-                <br><div class="contact-grid">
-                   
+<!-- Contact Header -->
+<section class="hero page-hero" id="contact-header" style="background-image: url('contact.png');">
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<h1>Contact Our Experts</h1>
+<p>Get in touch for reliable, secure, and scalable enterprise networking solutions.</p>
+</div>
+</section>
 
-<p>At ADS Networking, we’re here to keep your business connected, secure, and running smoothly. Whether you need network installation, cybersecurity solutions, cloud services, or ongoing IT support, our team is ready to help.
+<!-- Contact Section -->
+<section class="contact-section" id="contact-info">
+<div class="container">
+<div class="contact-wrapper">
+<div class="contact-info reveal">
+<h2>Let's Talk <span>Infrastructure</span></h2>
+<p>Whether you need custom enterprise routing, security firewall implementation, or an ongoing AMC program, our technical team is ready to support your business transformation.</p>
+<div class="contact-details">
+<p>📍 <strong>Address:</strong> Plot No. 80, Rukmini Enclave, Sundaram Colony, Bollaram, Secunderabad, Hyderabad - 500010, Telangana</p>
+<p>📧 <strong>Email:</strong> <a href="mailto:security@adsnetworkingservice.co.in">security@adsnetworkingservice.co.in</a></p>
+<p>📞 <strong>Phone:</strong> <a href="tel:+919666819812">+91 96668 19812</a></p>
+<p>🕒 <strong>Hours:</strong> 24/7 Enterprise Support</p>
+</div>
+<a href="consultation.html" class="btn btn-primary">Schedule a Consultation</a>
+</div>
 
-Let’s Talk About Your Network Needs
+<form class="contact-form reveal" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contactForm">
+<div class="form-group">
+<label for="name">Your Name <span class="required">*</span></label>
+<input type="text" id="name" name="name" placeholder="John Doe" required>
+</div>
+<div class="form-group">
+<label for="email">Your Email <span class="required">*</span></label>
+<input type="email" id="email" name="email" placeholder="john@company.com" required>
+</div>
+<div class="form-group">
+<label for="phone">Phone Number</label>
+<input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+</div>
+<div class="form-group">
+<label for="message">Your Message <span class="required">*</span></label>
+<textarea id="message" name="message" rows="5" placeholder="Tell us about your networking needs..." required></textarea>
+</div>
+<button type="submit" class="btn btn-primary">Send Message</button>
+<p class="form-success" id="formSuccess" data-form-success="true">Thank you! Your message has been sent.</p>
+</form>
+</div>
+</div>
+</section>
 
-Have a question? Need a quote? Looking for expert advice?
-Reach out to us today and one of our networking specialists will get back to you promptly.</p>
-                   </br>
-                    <div class="contact-info">
-                        <h3>Contact Information</h3>
-                        <div class="contact-item">
-                            <span class="contact-icon">✉️</span>
-                            <div>
-                                <p style="font-weight: 600;">Email</p>
-                                <a href="mailto:security@adsnetworkingservice.co.in">security@adsnetworkingservice.co.in</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">📞</span>
-                            <div>
-                                <p style="font-weight: 600;">Phone</p>
-                                <a href="tel:+91 9666819812">+91 9666819812</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">📍</span>
-                            <div>
-                                <p style="font-weight: 600;">Address</p>
-                                <p>PlotNo:80 Rukmini Enclave Sundaram Colony Bollaram <br>Secunderabad Hyderabad 500010<br>Telangana</p>
-                            </div>
-                        </div>
-                    </div>
-                    <form class="contact-form" 
-      action="https://formsubmit.co/assservice2203@gmail.com" 
-      method="POST">
-                    <input type="hidden" name="_subject" value="New Enquiry from Website">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_template" value="table">
+<script src="script.js?v=2.0"></script>
 
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" placeholder="Your name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" placeholder="your@email.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" placeholder="Tell us about your networking needs..." required></textarea>
-                        </div>
- 
-      
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919666819812?text=Hi%2C%20I%27m%20interested%20in%20your%20enterprise%20networking%20services" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const cursor = document.querySelector(".custom-cursor__cursor");
-    const cursorTwo = document.querySelector(".custom-cursor__cursor-two");
-
-    if (!cursor || !cursorTwo) return;
-
-    document.addEventListener("mousemove", function (e) {
-        cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-        cursorTwo.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-    });
-
-    document.querySelectorAll("a, button, .btn-get-started").forEach(el => {
-        el.addEventListener("mouseenter", () => {
-            cursor.classList.add("hover");
-            cursorTwo.classList.add("hover");
-        });
-
-        el.addEventListener("mouseleave", () => {
-            cursor.classList.remove("hover");
-            cursorTwo.classList.remove("hover");
-        });
-    });
-});
-</script>
-
-
+<!-- Chatbot Widget -->
+<div class="chatbot-widget" id="chatbotWidget">
+<button class="chatbot-toggle" id="chatbotToggle" aria-label="Open chat">
+<svg class="chat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+<svg class="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+<span class="chatbot-notification" id="chatbotNotification">1</span>
+</button>
+<div class="chatbot-window" id="chatbotWindow">
+<div class="chatbot-header">
+<div class="chatbot-avatar">🤖</div>
+<div class="chatbot-info"><h4>ADS Assistant</h4><span class="chatbot-status"><span class="status-dot"></span> Online</span></div>
+<button class="chatbot-minimize" id="chatbotMinimize" aria-label="Minimize chat">−</button>
+</div>
+<div class="chatbot-messages" id="chatbotMessages">
+<div class="chat-message bot">
+<div class="message-content"><p>👋 Hi there! Welcome to <strong>ADS Networking Service</strong>.</p><p>How can I help you today?</p></div>
+<span class="message-time">Now</span>
+</div>
+<div class="quick-replies" id="quickReplies">
+<button class="quick-reply" data-reply="services">Our Services</button>
+<button class="quick-reply" data-reply="pricing">Pricing</button>
+<button class="quick-reply" data-reply="consultation">Free Consultation</button>
+<button class="quick-reply" data-reply="support">Technical Support</button>
+<button class="quick-reply" data-reply="contact">Contact Info</button>
+</div>
+</div>
+<form class="chatbot-input" id="chatbotForm">
+<input type="text" id="chatbotInput" placeholder="Type your message..." autocomplete="off" required>
+<button type="submit" aria-label="Send message"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></button>
+</form>
+<div class="chatbot-footer">Powered by <strong>ADS Networking</strong></div>
+</div>
+</div>
 
 <!-- Footer -->
 <footer>
@@ -337,6 +132,5 @@ document.addEventListener("DOMContentLoaded", function () {
 <p class="footer-subtitle">Enterprise Networking as a Service | Reliable • Secure • Scalable</p>
 </div>
 </footer>
-
 </body>
 </html>
